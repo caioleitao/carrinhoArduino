@@ -33,21 +33,21 @@ void loop() {
   delay(1000);
 }
 
-void andar(bool dir){
+void andar(bool dir, int pot){
   if(dir == 0){
     digitalWrite(6, 1);
     digitalWrite(7, 0);
     digitalWrite(4, 1);
     digitalWrite(5, 0);
-    analogWrite(3, 255);
-    analogWrite(9, 255);
+    analogWrite(3, pot);
+    analogWrite(9, pot);
   }
   else{
     digitalWrite(6, 0);
     digitalWrite(7, 1);
     digitalWrite(4, 0);
     digitalWrite(5, 1);
-    analogWrite(3, 255);
-    analogWrite(9, 255);
+    analogWrite(3, pot);
+    analogWrite(9, pot);
   }
 }
